@@ -101,12 +101,6 @@
         iconSize:     [35, 35], // size of the icon
     });
 
-    var geoJsonLayerAllBars = L.geoJSON(patagoniaGEOJSON, {
-        pointToLayer: function (feature, latlng) {
-            return L.marker(latlng,{icon: barsIcon});
-        }
-    }).addTo(map);
-
     // add GeoJSON layer to the map once the file is loaded
     var geoJsonLayer = L.geoJSON(geoJsonData, {
         pointToLayer: function (feature, latlng) {
@@ -123,10 +117,7 @@
                 case 'bar': layer.bindPopup( "Bar recomendado: <a href='" + feature.properties.url + "'>" + feature.properties.name + "</a><br/>" );return;
             }
         }
-    });//.addTo(map);
-
-    geoJsonLayerAllBars.addData(geoJsonLayer);
-    //geoJsonLayerAllBars.addTo(map)
+    }).addTo(map);
 
     // Fit bounds to the markers
     map.fitBounds(geoJsonLayer.getBounds());
