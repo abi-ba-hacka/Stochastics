@@ -1,0 +1,11 @@
+var patagoniaGEOJSON = {
+    "features":
+    [{
+        "geometry": {
+            "coordinates": [-58.3999364,-34.6010494],
+            "type": "Point"},
+        "type": "Feature",
+        "name": "Refugio Patagonia"
+    }
+    ]
+}

@@ -1,0 +1,147 @@
+{
+    "results":
+    [{
+        "geometry": {
+            "location": {
+                "lat": -34.6010494,
+                "lng": -58.3999364
+            }
+        },
+        "name": "Cerveza Patagonia - Refugio Facultad de Medicina",
+        "vicinity": "Pasteur 706, CABA",
+        "url": "https://www.google.com.ar/maps/place/Cerveza+Patagonia+-+Refugio+Pasteur/@-34.6009333,-58.4001609,18.44z/data=!4m8!1m2!2m1!1sCerveza+Patagonia+-+Refugio+!3m4!1s0x95bcca949c612ecf:0x67787c2cebdd02d7!8m2!3d-34.6009964!4d-58.3998157",
+        "shortUrl": "https://goo.gl/REWk5U"
+    },
+    {
+        "geometry": {
+            "location": {
+                "lat": -34.5924717,
+                "lng": -58.40422269999999
+            }
+        },
+        "name": "Cerveza Patagonia - Refugio Arenales",
+        "vicinity": "Arenales 2707, CABA",
+        "url": "https://www.google.com.ar/maps/place/Arenales+2707,+C1425BEE+CABA/@-34.5924793,-58.406428,17z/data=!3m1!4b1!4m5!3m4!1s0x95bcca9add110ceb:0xbba282b1c81759ee!8m2!3d-34.5924793!4d-58.4042393",
+        "shortUrl": "https://goo.gl/45XZYu"
+    },
+    {
+        "geometry": {
+            "location": {
+                "lat": -34.6150315,
+                "lng": -58.3743947
+            }
+        },
+        "name": "Cerveza Patagonia, Refugio San Telmo - Perú",
+        "vicinity": "Perú 602, CABA",
+        "url": "https://www.google.com.ar/maps/place/Cerveza+Patagonia+-+Refugio+San+Telmo/@-34.6151222,-58.3754766,17z/data=!4m8!1m2!2m1!1sCerveza+Patagonia+-+Refugio+!3m4!1s0x95bccad578e9c1fb:0x2f022526191838e1!8m2!3d-34.6149785!4d-58.3744413",
+        "shortUrl": "https://goo.gl/hwbjTP"
+    },
+    {
+        "geometry": {
+            "location": {
+                "lat": -34.6203523,
+                "lng": -58.3723441
+            }
+        },
+        "name": "Cerveza Patagonia, Refugio Don Anselmo",
+        "vicinity": "Don Anselmo Aieta 1083, CABA",
+        "url": "https://www.google.com.ar/maps/place/Cerveza+Patagonia+-+Refugio+Don+Anselmo/@-34.6203523,-58.3723441,18.47z/data=!4m8!1m2!2m1!1sCerveza+Patagonia+-+Refugio+!3m4!1s0x95bccb2cb1708ad7:0xc76603010cccf5b6!8m2!3d-34.62044!4d-58.372215",
+        "shortUrl": "https://goo.gl/QM22j8"
+    },
+    {
+        "geometry": {
+            "location": {
+                "lat": -34.597733,
+                "lng": -58.4173912
+            }
+        },
+        "name": "Cerveza Patagonia, Refugio Córdoba y Mario Bravo",
+        "vicinity": "Av. Córdoba 3573, CABA",
+        "url": "https://www.google.com.ar/maps/place/Cerveza+Patagonia+-+Refugio+Córdoba/@-34.597733,-58.4173912,19z/data=!3m1!4b1!4m5!3m4!1s0x95bcca8804314a4b:0x8b1e4fe127e01de5!8m2!3d-34.597733!4d-58.416844",
+        "shortUrl": "https://goo.gl/XEZLEz"
+    },
+    {
+        "geometry": {
+            "location": {
+                "lat": -34.5986414,
+                "lng": -58.3875688
+            }
+        },
+        "name": "Cerveza Patagonia, Refugio Paraguay y Uruguay",
+        "vicinity": "Paraguay 1448, CABA",
+        "url": "https://www.google.com.ar/maps/place/Cerveza+Patagonia+-+Refugio+Paraguay/@-34.5986414,-58.3875688,18z/data=!4m8!1m2!2m1!1sCerveza+Patagonia+-+Refugio+!3m4!1s0x95bccab8bdab4c55:0xd1640da52140272f!8m2!3d-34.5983887!4d-58.3875563",
+        "shortUrl": "https://goo.gl/SpmXPS"
+    },
+    {
+        "geometry": {
+            "location": {
+                "lat": -34.6014216,
+                "lng": -58.3927544
+            }
+        },
+        "name": "Cerveza Patagonia, Refugio Callao",
+        "vicinity": "Av. Callao 650, CABA",
+        "url": "https://www.google.com.ar/maps/place/Cerveza+Patagonia+-+Refugio+Callao/@-34.6014216,-58.3927544,17.86z/data=!4m8!1m2!2m1!1sCerveza+Patagonia+-+Refugio+!3m4!1s0x95bccac06e824aef:0x6087dd5960284b90!8m2!3d-34.6014716!4d-58.392717",
+        "shortUrl": "https://goo.gl/D2VLvf"
+    },
+    {
+        "geometry": {
+            "location": {
+                "lat": -34.5987254,
+                "lng": -58.3950685
+            }
+        },
+        "name": "Cerveza Patagonia, Refugio Paraguay y Riobamba",
+        "vicinity": "Paraguay 1900, CABA",
+        "url": "https://www.google.com.ar/maps/place/Cerveza+Patagonia+-+Refugio+Riobamba/@-34.5987254,-58.3950685,19z/data=!3m1!4b1!4m5!3m4!1s0x95bcca957ffd0053:0x582fe5113aeb6ca2!8m2!3d-34.5987254!4d-58.3945213",
+        "shortUrl": "https://goo.gl/uOEF6M"
+    },
+    {
+        "geometry": {
+            "location": {
+                "lat": -34.5811051,
+                "lng": -58.4306089
+            }
+        },
+        "name": "Cerveza Patagonia, Refugio Distrito Arcos",
+        "vicinity": "Paraguay 4979, CABA",
+        "url": "https://www.google.com.ar/maps/place/Paraguay+4979,+C1425BTC+CABA/@-34.5811051,-58.4306089,17z/data=!3m1!4b1!4m5!3m4!1s0x95bcb5855498bc5d:0x902f9f139d0ea310!8m2!3d-34.5811051!4d-58.4284202",
+        "shortUrl": "https://goo.gl/2kBPxK"
+    },
+    {
+        "geometry": {
+            "location": {
+                "lat": -34.6088309,
+                "lng": -58.3785917
+            }
+        },
+        "name": "Cerveza Patagonia, Av. de Mayo",
+        "vicinity": "Av. de Mayo 702, CABA",
+        "url": "https://www.google.com.ar/maps/place/Av.+de+Mayo+702,+C1070AAP+CABA/@-34.6088309,-58.3785917,17z/data=!3m1!4b1!4m5!3m4!1s0x95bccad3cec10743:0xe1fff2dc1b8a4429!8m2!3d-34.6088309!4d-58.376403",
+        "shortUrl": "https://goo.gl/bxwyQE"
+    },
+    {
+        "geometry": {
+            "location": {
+                "lat": -34.5724225,
+                "lng": -58.4319776
+            }
+        },
+        "name": "Cerveza Patagonia, Refugio Cañitas",
+        "vicinity": "Andrés Arguibel 2831, CABA",
+        "url": "https://www.google.com.ar/maps/place/Andrés+Arguibel+2831,+C1426DKA+CABA/@-34.5724225,-58.4319776,17z/data=!3m1!4b1!4m5!3m4!1s0x95bcb597ec0f7057:0xcd060a8227f97bce!8m2!3d-34.5723125!4d-58.4298327",
+        "shortUrl": "https://goo.gl/hmzcHi"
+    },
+    {
+        "geometry": {
+            "location": {
+                "lat": -34.3833419,
+                "lng": -58.7505628
+            }
+        },
+        "name": "Cerveza Patagonia, Jardín Cervecero Paseo Maschwtiz",
+        "vicinity": "Mendoza 1748, Ing. Maschwitz",
+        "url": "https://www.google.com.ar/maps/place/Mendoza+1748,+B1623CSH+Ingeniero+Maschwitz,+Buenos+Aires/@-34.3833419,-58.7505628,17z/data=!3m1!4b1!4m5!3m4!1s0x95bc9f8d5a4d3a9f:0xa05d498e1a838c37!8m2!3d-34.3833419!4d-58.7483741?hl=en",
+        "shortUrl": "https://goo.gl/YKjCj4"
+    }]
+}

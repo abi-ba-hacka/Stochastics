@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<!--
+    Editorial by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+    <meta charset="UTF-8"> 
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://bootswatch.com/cosmo/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css">
+    <link rel="stylesheet" type="text/css" href="/static/font/style.css">
+</head>
+<body style="background-color: #F2F2F2;">
+    <nav class="navbar navbar-default navbar-fixed-top" style="background-color: #8F1E2A;">
+      <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" style="color:white; font-family:'Foco Bold'"><b>HACK THE WORLD</b> by AB InBev</a>
+        </div>
+    </div>
+</nav>
+
+<!-- ################# Main block ################# -->
+<div class="jumbotron" style="background-color: #F2F2F2;">
+    <div class="container">
+        <div class="page-header">
+            <h1 style="font-family:'Foco Bold'"><img src="/static/img/logo.svg" style="width: 120px;height: auto;">#NosJuntamos</h1>
+        </div>
+        <p>Punto de encuentro para amigos de <strong>Cerveza Patagonia</strong></p>
+
+        <div class="container" id="mapid" style="width: 1100px; height: 400px;"></div>
+
+        <div class="page-header">
+        <h1 style="color:black; font-family: 'Foco Bold'">Métricas</h1>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="col alert alert-dismissible alert-danger" style="background-color: #fff; color: black">
+                    En promedio nos consultan grupos de <strong>{{'{0:0.2f}'.format(meanSize[0])}}</strong> personas.
+                </div>
+                <div class="col alert alert-dismissible alert-danger">
+                    La hora media de consulta es <strong>16.15PM</strong>.
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="alert alert-dismissible alert-success" style="background-color: #; color: black">
+                    Ha habido <strong>{{queriesLastDay[0]}}</strong> consultas el último día.
+                </div>
+                <div class="alert alert-dismissible alert-warning">
+                    La hora pico de consultas es <strong>17.33PM</strong>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="alert alert-dismissible alert-info">
+                    <strong>{{mostRecomended[0]}}</strong> es el refugio que más se recomienda a los Clientes.
+                </div>
+                <div class="alert alert-dismissible alert-success" style=" background-color: #000; color: white">
+                    La cantidad de consultas totales es <strong>{{totalQueries[0]}}</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ################# Main block ################# -->
+
+<!-- ################# Scripts ################# -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+<script type="text/javascript" src="/static/patagonia.geojson"></script>
+<script>
+    var geoJsonData = {{geoJsonData[0] | safe}};
+
+    var map = L.map('mapid').setView([-34.6156541,-58.5734066], 6);
+
+    L.tileLayer('https://api.mapbox.com/styles/v1/checho3388/cj12amq2v003b2sqs3essgiwa/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiY2hlY2hvMzM4OCIsImEiOiJjajEyYTR0a3gwNXdjMnFtdGVqYTF6ZGdoIn0.zcWUgUUAlAIg4wmd3BzsCw', {
+        attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+    }).addTo(map);
+
+    var beerIcon = L.icon({
+        iconUrl: "/static/img/placeholder.svg",
+        iconSize:     [35, 35], // size of the icon
+    });
+
+    var midIcon = L.icon({
+        iconUrl: "/static/img/aim.svg",
+        iconSize:     [27, 27], // size of the icon
+    });
+
+    var usrIcon = L.icon({
+        iconUrl: "/static/img/position.svg",
+        iconSize:     [35, 35], // size of the icon
+    });
+
+    var barsIcon = L.icon({
+        iconUrl: "/static/img/placeholder_all.svg",
+        iconSize:     [35, 35], // size of the icon
+    });
+
+    var geoJsonLayerAllBars = L.geoJSON(patagoniaGEOJSON, {
+        pointToLayer: function (feature, latlng) {
+            return L.marker(latlng,{icon: barsIcon});
+        }
+    }).addTo(map);
+
+    // add GeoJSON layer to the map once the file is loaded
+    var geoJsonLayer = L.geoJSON(geoJsonData, {
+        pointToLayer: function (feature, latlng) {
+            switch (feature.properties.kind) {
+                case 'user': return L.marker(latlng,{icon: usrIcon});
+                case 'midpoint': return L.marker(latlng, {icon: midIcon});
+                case 'bar': return L.marker(latlng,{icon: beerIcon});
+            }
+        },
+        onEachFeature: function(feature, layer){
+            switch (feature.properties.kind) {
+                case 'user': layer.bindPopup( "Usuario: <strong>" + feature.properties.name + "</strong><br/>" );return;
+                case 'midpoint': layer.bindPopup( "El punto medio entre los usuarios es <strong>aquí</strong><br/>" );return;
+                case 'bar': layer.bindPopup( "Bar recomendado: <a href='" + feature.properties.url + "'>" + feature.properties.name + "</a><br/>" );return;
+            }
+        }
+    });//.addTo(map);
+
+    geoJsonLayerAllBars.addData(geoJsonLayer);
+    //geoJsonLayerAllBars.addTo(map)
+
+    // Fit bounds to the markers
+    map.fitBounds(geoJsonLayer.getBounds());
+</script>
+
+<!-- ################# End of Scripts ################# -->
+
+</body>
+</html>
